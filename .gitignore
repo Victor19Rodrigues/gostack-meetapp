@@ -1,4 +1,10 @@
 node_modules
+
+coverage
+
 tmp/uploads/*
+
 !tmp/uploads/.gitkeep
-.env
+
+dist
+backend/__tests__/database.sqlite
