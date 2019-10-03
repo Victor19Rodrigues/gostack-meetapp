@@ -4,8 +4,6 @@ import mongoose from 'mongoose';
 
 import app from '../../src/app';
 
-import User from '../../src/app/models/User';
-
 import factory from '../factories';
 import truncate from '../utils/truncate';
 
@@ -18,6 +16,7 @@ describe('User', () => {
     await mongoose.connection.close();
   });
 
+  // Store User
   it('should encrypt user password when new user created', async () => {
     const user = await factory.create('User', {
       password: '123456',
@@ -36,7 +35,7 @@ describe('User', () => {
         email: 'joao@gmail.com.br',
         password: '123',
       });
-    expect(response.body.error).toBe('password must be at least 6 characters');
+    expect(response.body.error).toBe('Password must be at least 6 characters');
   });
 
   it('should be able to register', async () => {
@@ -71,7 +70,7 @@ describe('User', () => {
         password: '123456',
       });
 
-    expect(response.body.error).toBe('name is a required field');
+    expect(response.body.error).toBe('Name is a required field');
   });
 
   it('should not be able to register when not send email', async () => {
@@ -82,7 +81,7 @@ describe('User', () => {
         password: '123456',
       });
 
-    expect(response.body.error).toBe('e-mail is a required field');
+    expect(response.body.error).toBe('Email is a required field');
   });
 
   it('should not be able to register when not send password', async () => {
@@ -93,6 +92,23 @@ describe('User', () => {
         email: 'vitor1908@gmail.com',
       });
 
-    expect(response.body.error).toBe('password is a required field');
+    expect(response.body.error).toBe('Password is a required field');
+  });
+
+  // Update User
+  it('Should be able to update the user', async () => {
+    const user = await factory.create('User', {
+      email: 'vitor1908@gmail.com',
+      password: '159357',
+    });
+
+    const response = await request(app)
+      .put('/users')
+      .send({
+        name: 'Victor',
+        email: 'vitor1908@gmail.com',
+      })
+      .set('Authorization', `Bearer ${user.generateToken()}`);
+    expect(response.body.name).toBe('Victor');
   });
 });
