@@ -109,6 +109,42 @@ describe('User', () => {
         email: 'vitor1908@gmail.com',
       })
       .set('Authorization', `Bearer ${user.generateToken()}`);
+
     expect(response.body.name).toBe('Victor');
+  });
+
+  it('should not update user that already exists', async () => {
+    const firstUser = await factory.create('User');
+
+    const secondUser = await factory.create('User', {
+      email: 'vitor1908@gmail.com.br',
+    });
+
+    const response = await request(app)
+      .put('/users')
+      .send({
+        name: 'Victor',
+        email: secondUser.email,
+      })
+      .set('Authorization', `Bearer ${firstUser.generateToken()}`);
+
+    expect(response.status).toBe(400);
+  });
+
+  it('should not update the user when only oldPassword was sent', async () => {
+    const user = await factory.create('User', {
+      password: '123456',
+    });
+
+    const response = await request(app)
+      .put('/users')
+      .send({
+        email: user.email,
+        oldPassword: '123456',
+        password: '654321',
+      })
+      .set('Authorization', `Bearer ${user.generateToken()}`);
+
+    expect(response.body.error).toBe('You must to confirm the password');
   });
 });
