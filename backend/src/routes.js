@@ -5,6 +5,8 @@ import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
 import FileController from './app/controllers/FileController';
 import MeetappController from './app/controllers/MeetappController';
+import SubscriptionController from './app/controllers/SubscriptionController';
+import NotificationController from './app/controllers/NotificationController';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -36,5 +38,12 @@ routes.put(
   MeetappController.update
 );
 routes.delete('/meetapps/:id', MeetappController.delete);
+
+routes.get('/subscriptions', SubscriptionController.index);
+routes.post('/meetapps/:meetappId/subscriptions', SubscriptionController.store);
+routes.delete('/subscriptions/:id', SubscriptionController.delete);
+
+routes.get('/notifications', NotificationController.index);
+routes.put('/notifications/:id', NotificationController.update);
 
 export default routes;

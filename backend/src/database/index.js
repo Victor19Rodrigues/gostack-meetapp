@@ -4,10 +4,11 @@ import mongoose from 'mongoose';
 import User from '../app/models/User';
 import File from '../app/models/File';
 import Meetapp from '../app/models/Meetapp';
+import Subscription from '../app/models/Subscription';
 
 import databaseConfig from '../config/database';
 
-const models = [User, File, Meetapp];
+const models = [User, File, Meetapp, Subscription];
 
 class Database {
   constructor() {
