@@ -76,8 +76,10 @@ $ docker run --name redis_meetapp -p 6379:6379 -d -t redis:alpine
 # Run migrates
 $ yarn migrate
 
-# Run seeds
-$ yarn seed
+# Run seeds in that order
+$ yarn sequelize db:seed --seed 20191004210144-users 
+$ yarn sequelize db:seed --seed 20191007191936-files 
+$ yarn sequelize db:seed --seed 20191007185533-meetapps
 
 # Run the Backend
 $ yarn dev
