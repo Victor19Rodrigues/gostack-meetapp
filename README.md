@@ -82,5 +82,9 @@ $ yarn seed
 # Run the Backend
 $ yarn dev
 ```
+#### Frontend
+
+#### Mobile
+
 
 
