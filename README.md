@@ -49,5 +49,38 @@ This application is a developer event aggregator app called Meetapp (an acronym 
 ### Mobile
 
 ## Installation
+First of all, to run this application you'll need to install [Node.js v10.15](https://nodejs.org) or higher + [Yarn v1.17](https://yarnpkg.com/lang/en/) or higher on your computer. From your command line:
+
+### How to use: 
+#### Backend
+
+```bash
+# Clone this repository
+$ git clone https://github.com/Victor19Rodrigues/gostack-meetapp.git
+
+# Go into the repository
+$ cd meetapp-gostack/backend
+
+# Install dependencies
+$ yarn
+
+# Created docker container postgree
+$ docker run --name meetapp -e POSTGRES_PASSWORD=docker -e POSTGRES_DB=meetapp -p 5432:5432 -d postgres
+
+# Created docker container mongo
+$ docker run --name mongo_meetapp -p 27017:27017 -d -t mongo
+
+# Created docker container redis
+$ docker run --name redis_meetapp -p 6379:6379 -d -t redis:alpine
+
+# Run migrates
+$ yarn migrate
+
+# Run seeds
+$ yarn seed
+
+# Run the Backend
+$ yarn dev
+```
 
 

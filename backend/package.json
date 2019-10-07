@@ -6,9 +6,12 @@
   "scripts": {
     "dev": "nodemon src/server.js",
     "build": "sucrase ./src -d ./dist --transforms imports",
+    "migrate": "yarn sequelize db:migrate",
+    "seed": "yarn sequelize db:seed:all",
     "pretest": "NODE_ENV=test sequelize db:migrate",
     "test": "NODE_ENV=test jest --sourceMap=false --verbose",
-    "posttest": "NODE_ENV=test sequelize db:migrate:undo:all"
+    "posttest": "NODE_ENV=test sequelize db:migrate:undo:all",
+    "queue": "nodemon src/queue.js"
   },
   "dependencies": {
     "@sentry/node": "^5.6.2",
