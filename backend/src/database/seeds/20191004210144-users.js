@@ -20,6 +20,9 @@ for (let id = 1; id <= 50; id += 1) {
 module.exports = {
   up: async queryInterface => {
     await queryInterface.bulkInsert('users', users, {});
+    await queryInterface.sequelize.query(
+      `ALTER SEQUENCE "users_id_seq" RESTART WITH ${users.length + 1}`
+    );
   },
   down: queryInterface => queryInterface.bulkDelete('users', null, {}),
 };

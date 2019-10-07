@@ -64,6 +64,9 @@ const meetapps = [
 module.exports = {
   up: async queryInterface => {
     await queryInterface.bulkInsert('meetapps', meetapps, {});
+    await queryInterface.sequelize.query(
+      `ALTER SEQUENCE "meetapps_id_seq" RESTART WITH ${meetapps.length + 1}`
+    );
   },
   down: queryInterface => queryInterface.bulkDelete('meetapps', null, {}),
 };
