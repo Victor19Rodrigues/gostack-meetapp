@@ -18,7 +18,7 @@ This application is a developer event aggregator app called Meetapp (an acronym 
 - :floppy_disk: [Installation](#installation)
 
 ## Technologies
-:hammer In this project the following technologies were used:
+:hammer: In this project the following technologies were used:
 
 ### Backend
 -   [Node.js](https://nodejs.org)
@@ -59,7 +59,7 @@ First of all, to run this application you'll need to install [Node.js v10.15](ht
 $ git clone https://github.com/Victor19Rodrigues/gostack-meetapp.git
 
 # Go into the repository
-$ cd meetapp-gostack/backend
+$ cd gostack-meetapp/backend
 
 # Install dependencies
 $ yarn
