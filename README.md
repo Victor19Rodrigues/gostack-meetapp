@@ -49,7 +49,7 @@ This application is a developer event aggregator app called Meetapp (an acronym 
 ### Mobile
 
 ## Installation
-First of all, to run this application you'll need to install [Node.js v10.15](https://nodejs.org) or higher + [Yarn v1.17](https://yarnpkg.com/lang/en/) or higher on your computer. From your command line:
+First of all, to run this application you'll need to install [Node.js v10.15](https://nodejs.org) or higher, [Yarn v1.17](https://yarnpkg.com/lang/en/) or higher and [Docker](https://www.docker.com/docker-community) on your computer.
 
 ### How to use: 
 #### Backend
