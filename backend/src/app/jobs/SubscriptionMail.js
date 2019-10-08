@@ -1,4 +1,9 @@
+import { format, parseISO } from 'date-fns';
+import us from 'date-fns/locale/en-US';
+
 import Mail from '../../lib/Mail';
+
+const formatDate = data => format(data, "MMMM dd', at' H'h'", { locale: us });
 
 class SubscriptionMail {
   get key() {
@@ -17,6 +22,8 @@ class SubscriptionMail {
         meetapp: meetapp.title,
         user: user.name,
         email: user.email,
+        meetappDate: formatDate(parseISO(meetapp.date)),
+        sendDate: formatDate(new Date()),
       },
     });
   }
