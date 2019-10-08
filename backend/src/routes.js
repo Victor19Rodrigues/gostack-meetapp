@@ -7,6 +7,7 @@ import FileController from './app/controllers/FileController';
 import MeetappController from './app/controllers/MeetappController';
 import SubscriptionController from './app/controllers/SubscriptionController';
 import NotificationController from './app/controllers/NotificationController';
+import OrganizerController from './app/controllers/OrganizerController';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -45,5 +46,7 @@ routes.delete('/subscriptions/:id', SubscriptionController.delete);
 
 routes.get('/notifications', NotificationController.index);
 routes.put('/notifications/:id', NotificationController.update);
+
+routes.get('/organizer', OrganizerController.index);
 
 export default routes;
