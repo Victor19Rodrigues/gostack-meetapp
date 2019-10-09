@@ -2,6 +2,7 @@ import './bootstrap';
 
 import Youch from 'youch';
 import express from 'express';
+import cors from 'cors';
 import 'express-async-errors';
 
 import routes from './routes';
@@ -18,6 +19,12 @@ class App {
   }
 
   middlewares() {
+    const corsOptions = {
+      origin: 'http://localhost:3000',
+      optionsSuccessStatus: 200,
+    };
+
+    this.server.use(cors(corsOptions));
     this.server.use(express.json());
   }
 
