@@ -13,7 +13,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     async function loadMeetapp() {
-      const response = await api.get("meetups");
+      const response = await api.get("organizer");
 
       const responseMeetapp = response.data.map(data => {
         return {

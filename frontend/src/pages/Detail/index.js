@@ -49,7 +49,7 @@ export default function Detail() {
       <content>
         <div>
           <img
-            src={informationMeetapp.File.url}
+            src={informationMeetapp.file.url}
             alt={informationMeetapp.title}
           />
           <p
