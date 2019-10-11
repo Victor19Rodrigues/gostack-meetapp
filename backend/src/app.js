@@ -4,6 +4,7 @@ import Youch from 'youch';
 import express from 'express';
 import cors from 'cors';
 import 'express-async-errors';
+import path from 'path';
 
 import routes from './routes';
 
@@ -25,6 +26,10 @@ class App {
     };
 
     this.server.use(cors(corsOptions));
+    this.server.use(
+      '/files/examples',
+      express.static(path.resolve(__dirname, '..', 'tmp', 'examples'))
+    );
     this.server.use(express.json());
   }
 
