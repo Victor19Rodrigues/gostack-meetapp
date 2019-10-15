@@ -9,6 +9,7 @@ import Dashboard from "../pages/Dashboard";
 import Profile from "../pages/Profile";
 import Detail from "../pages/Detail";
 import EditMeetapp from "../pages/EditMeetapp";
+import NewMeetapp from "../pages/Meetapp/Add";
 
 export default function Routes() {
   return (
@@ -20,6 +21,7 @@ export default function Routes() {
       <Route path="/profile" component={Profile} isPrivate />
       <Route path="/detail" component={Detail} isPrivate />
       <Route path="/edit" component={EditMeetapp} isPrivate />
+      <Route path="/new" component={NewMeetapp} isPrivate />
 
       <Route path="/" component={() => <h1>404</h1>} />
     </Switch>

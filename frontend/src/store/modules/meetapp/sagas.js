@@ -29,8 +29,8 @@ export function* createMeetapp({ payload }) {
       location,
       file_id
     };
-    console.tron.log(meetapp);
-    const response = yield call(api.post, "meetups", meetapp);
+
+    const response = yield call(api.post, "meetapps", meetapp);
 
     toast.success("Meetapp criado com sucesso!");
 
@@ -48,7 +48,7 @@ export function* deleteMeetapp({ payload }) {
   try {
     const { id } = payload;
 
-    const response = yield call(api.delete, `meetups/${id}`);
+    const response = yield call(api.delete, `meetapps/${id}`);
 
     toast.success("Meetapp cancelado com sucesso!");
 
@@ -80,7 +80,7 @@ export function* editMeetapp({ payload }) {
       id
     };
     console.tron.log(meetapp);
-    const response = yield call(api.put, `meetups/${id}`, meetapp);
+    const response = yield call(api.put, `meetapps/${id}`, meetapp);
 
     toast.success("Meetapp editado com sucesso!");
 

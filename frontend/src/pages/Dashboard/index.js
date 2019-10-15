@@ -36,16 +36,16 @@ export default function Dashboard() {
   }
 
   function handleSubmitNewMeetapp() {
-    history.push("/edit");
+    history.push("/new");
   }
 
   return (
     <Container>
       <header>
-        <strong>Meus meetups</strong>
+        <strong>Meus meetapps</strong>
         <button type="submit" onClick={handleSubmitNewMeetapp}>
           <MdAddCircleOutline color="#fff" size={20} />
-          <p>Novo meetup</p>
+          <p>Novo meetapp</p>
         </button>
       </header>
 
