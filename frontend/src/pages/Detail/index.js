@@ -1,6 +1,7 @@
 import React from "react";
 import { MdDeleteForever, MdModeEdit, MdEvent, MdPlace } from "react-icons/md";
 import { useDispatch } from "react-redux";
+import { parseISO } from "date-fns";
 
 import history from "~/services/history";
 import { deleteMeetappRequest } from "~/store/modules/meetapp/actions";
@@ -15,8 +16,12 @@ export default function Detail() {
   const { time } = history.location.state.meetapp;
 
   function handleEdit(value) {
-    value.isEdit = true;
-    history.push("/edit", { meetapp: value });
+    const meetapp = {
+      ...value,
+      date: parseISO(value.date)
+    };
+
+    history.push("/edit", { meetapp });
   }
 
   function handleDelete(id) {

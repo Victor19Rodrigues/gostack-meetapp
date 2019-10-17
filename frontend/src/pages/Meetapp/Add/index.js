@@ -7,7 +7,6 @@ import { createMeetappRequest } from "~/store/modules/meetapp/actions";
 
 import { Container } from "./styles";
 
-/* COMPONENTS */
 import Banner from "~/components/Banner";
 import SelectDate from "~/components/DatePicker";
 

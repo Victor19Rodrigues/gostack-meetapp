@@ -64,12 +64,9 @@ export function* deleteMeetapp({ payload }) {
 
 export function* editMeetapp({ payload }) {
   try {
+    console.tron.log(payload.data);
+
     const { file_id, title, description, date, location, id } = payload.data;
-
-    // const parsedDate = parseISO(date);
-    // console.tron.log(parsedDate);
-
-    // const znDate = zonedTimeToUtc(parsedDate, "America/Sao_Paulo");
 
     const meetapp = {
       title,
@@ -79,7 +76,7 @@ export function* editMeetapp({ payload }) {
       file_id,
       id
     };
-    console.tron.log(meetapp);
+
     const response = yield call(api.put, `meetapps/${id}`, meetapp);
 
     toast.success("Meetapp editado com sucesso!");

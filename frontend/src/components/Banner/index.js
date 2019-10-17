@@ -7,7 +7,7 @@ import background from "~/assets/back.png";
 import { Container } from "./styles";
 
 export default function BannerInput() {
-  const { defaultValue, registerField } = useField("meetapp");
+  const { defaultValue, registerField } = useField("file");
   const [file, setFile] = useState(defaultValue && defaultValue.id);
   const [preview, setPreview] = useState(defaultValue && defaultValue.url);
 

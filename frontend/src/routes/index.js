@@ -8,7 +8,7 @@ import SignUp from "../pages/SignUp";
 import Dashboard from "../pages/Dashboard";
 import Profile from "../pages/Profile";
 import Detail from "../pages/Detail";
-import EditMeetapp from "../pages/EditMeetapp";
+import EditMeetapp from "../pages/Meetapp/Edit";
 import NewMeetapp from "../pages/Meetapp/Add";
 
 export default function Routes() {
