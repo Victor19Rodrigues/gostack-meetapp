@@ -39,6 +39,7 @@ routes.put(
   MeetappController.update
 );
 routes.delete('/meetapps/:id', MeetappController.delete);
+routes.get('/meetapps/:id', MeetappController.show);
 
 routes.get('/subscriptions', SubscriptionController.index);
 routes.post('/meetapps/:meetappId/subscriptions', SubscriptionController.store);

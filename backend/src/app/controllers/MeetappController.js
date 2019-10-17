@@ -4,6 +4,7 @@ import { isBefore, startOfDay, endOfDay, parseISO } from 'date-fns';
 import Meetapp from '../models/Meetapp';
 import User from '../models/User';
 import File from '../models/File';
+import Subscription from '../models/Subscription';
 
 class MeetappController {
   async index(req, res) {
@@ -93,6 +94,36 @@ class MeetappController {
     await meetapp.destroy();
 
     return res.status(200).send();
+  }
+
+  async show(req, res) {
+    const { id } = req.params;
+
+    const meetapp = await Meetapp.findByPk(id, {
+      include: [
+        {
+          model: User,
+          as: 'user',
+          attributes: ['id', 'name', 'email'],
+        },
+        {
+          model: File,
+          as: 'file',
+          attributes: ['id', 'path', 'url'],
+        },
+        {
+          model: Subscription,
+          as: 'subscribers',
+          attributes: ['user_id'],
+        },
+      ],
+    });
+
+    if (!meetapp) {
+      return res.status(400).json({ error: 'Meetapp does not exists' });
+    }
+
+    return res.status(200).json({ meetapp });
   }
 }
 
