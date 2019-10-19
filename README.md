@@ -48,6 +48,21 @@ This application is a developer event aggregator app called Meetapp (an acronym 
 
 ### Frontend
 
+- [ReactJS](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [Redux-Saga](https://redux-saga.js.org/)
+- [rocketseat/unform](https://github.com/Rocketseat/unform)
+- [Polished](https://polished.js.org/)
+- [Immer](https://github.com/immerjs/immer)
+- [React-toastify](https://fkhadra.github.io/react-toastify/)
+- [Reactotron](https://infinite.red/reactotron)
+- [history](https://www.npmjs.com/package/history)
+- [React Datepicker](https://reactdatepicker.com/)
+- [Redux Persist](https://github.com/rt2zz/redux-persist)
+- [React Perfect Scrollbar](https://github.com/goldenyz/react-perfect-scrollbar)
+- [React Icons](https://react-icons.netlify.com/#/)
+- [Styled Components](https://www.styled-components.com/)
+
 ### Mobile
 
 ## Installation
@@ -64,9 +79,6 @@ $ git clone https://github.com/Victor19Rodrigues/gostack-meetapp.git
 #### Backend
 
 ```bash
-# Clone this repository
-$ git clone https://github.com/Victor19Rodrigues/gostack-meetapp.git
-
 # Go into the repository
 $ cd gostack-meetapp/backend
 
