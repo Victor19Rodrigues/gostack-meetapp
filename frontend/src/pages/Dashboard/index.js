@@ -17,7 +17,7 @@ export default function Dashboard() {
 
       const responseMeetapp = response.data.map(data => {
         return {
-          time: format(new Date(data.date), "d 'de' MMMM', às ' HH'h'", {
+          time: format(new Date(data.date), "d 'de' MMMM', às ' HH'h'mm", {
             locale: pt
           }),
           past: data.past,
