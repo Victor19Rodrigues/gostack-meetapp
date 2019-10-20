@@ -1,0 +1,80 @@
+import styled from 'styled-components/native';
+
+export const Container = styled.View.attrs({
+    elevation: 2,
+})`
+    background: #fff;
+    border-radius: 4px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    overflow: hidden;
+`;
+
+export const Banner = styled.Image.attrs({
+    resizeMode: 'cover',
+})`
+    width: 100%;
+    height: 140px;
+    align-content: stretch;
+`;
+
+export const Info = styled.View`
+    padding: 20px;
+`;
+
+export const Title = styled.Text`
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 15px;
+`;
+
+export const InfoRow = styled.View`
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+    ${({last}) =>
+        last &&
+        `
+    margin-bottom: 20px;
+  `}
+`;
+
+export const InfoText = styled.Text`
+    font-size: 14px;
+    color: #888;
+    margin-left: 6px;
+    max-width: 200px;
+`;
+
+export const TextPast = styled.Text`
+    font-size: 18px;
+    color: #888;
+    padding: 10px;
+    background: #efef22;
+    border-color: #888;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 4px;
+
+    align-items: center;
+    justify-content: center;
+`;
+
+export const TextSubscribe = styled.Text`
+    font-size: 18px;
+    color: #fff;
+    padding: 10px;
+    background: #4eba17;
+    border-color: #888;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+
+    border-radius: 4px;
+
+    align-items: center;
+    justify-content: center;
+`;
