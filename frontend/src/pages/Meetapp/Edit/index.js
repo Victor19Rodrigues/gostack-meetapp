@@ -50,7 +50,7 @@ export default function EditMeetapp() {
         <Input name="location" placeholder="Localização" />
         <button className="submit-button" type="submit">
           <MdAddCircleOutline color="#fff" size={20} />
-          <p>Salvar meetup</p>
+          <p>Salvar meetapp</p>
         </button>
       </Form>
     </Container>

@@ -17,11 +17,6 @@ export function* createMeetapp({ payload }) {
   try {
     const { file_id, title, description, date, location } = payload.data;
 
-    // const parsedDate = parseISO(date);
-    // console.tron.log(parsedDate);
-
-    // const znDate = zonedTimeToUtc(parsedDate, "America/Sao_Paulo");
-
     const meetapp = {
       title,
       description,
