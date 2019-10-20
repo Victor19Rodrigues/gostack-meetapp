@@ -6,7 +6,7 @@ const location = 'Av. Nove de Julho, 3186 - Jardim Paulista, São Paulo - SP';
 const meetapps = [
   {
     id: 1,
-    title: 'Cloud Native São Paulo - Meetup #12',
+    title: 'Cloud Native São Paulo - Meetapp #12',
     description,
     location,
     date: '2019-12-28T18:00:00.000Z',
@@ -28,7 +28,7 @@ const meetapps = [
   },
   {
     id: 3,
-    title: 'Frontend SP Meetup',
+    title: 'Frontend SP Meetapp',
     description,
     location,
     date: '2019-12-12T15:00:00.000Z',
