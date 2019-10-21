@@ -72,7 +72,7 @@ This application is a developer event aggregator app called Meetapp (an acronym 
 
 ## Installation
 
-First of all, to run this application you'll need to install [Node.js v10.15](https://nodejs.org) or higher, [Yarn v1.17](https://yarnpkg.com/lang/en/) or higher and [Docker](https://www.docker.com/docker-community), [Genymotion](https://www.genymotion.com/) for emulate device and [Android Studio SDK](https://developer.android.com/studio) on your computer.
+First of all, to run this application you'll need to install [Node.js v10.15](https://nodejs.org) or higher, [Yarn v1.17](https://yarnpkg.com/lang/en/) or higher, [Docker](https://www.docker.com/docker-community), [Genymotion](https://www.genymotion.com/) for emulate device and [Android Studio SDK](https://developer.android.com/studio) on your computer.
 
 ### How to use:
 
@@ -127,7 +127,7 @@ $ yarn start
 #### Mobile
 
 Access Genymotion and open an emulate device.
-P.S.: It was tested on Android system only.
+P.S.: Tested on Android system only.
 
 ```bash
 # Go into the repository
@@ -142,3 +142,7 @@ $ react-native start
 # Open another window in terminal and run
 $ react-native run-android
 ```
+
+---
+
+Made with ♥ by Victor Rodrigues :smiley: [Get in touch!](https://www.linkedin.com/in/victor-rodrigues-676563ba/)
