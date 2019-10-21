@@ -65,9 +65,14 @@ This application is a developer event aggregator app called Meetapp (an acronym 
 
 ### Mobile
 
+- [React Native](https://facebook.github.io/react-native/)
+- [react-native-gesture-handler](https://kmagiera.github.io/react-native-gesture-handler/docs/getting-started.html)
+- [react-native-linear-gradient](https://github.com/react-native-community/react-native-linear-gradient)
+- [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
+
 ## Installation
 
-First of all, to run this application you'll need to install [Node.js v10.15](https://nodejs.org) or higher, [Yarn v1.17](https://yarnpkg.com/lang/en/) or higher and [Docker](https://www.docker.com/docker-community) on your computer.
+First of all, to run this application you'll need to install [Node.js v10.15](https://nodejs.org) or higher, [Yarn v1.17](https://yarnpkg.com/lang/en/) or higher and [Docker](https://www.docker.com/docker-community), [Genymotion](https://www.genymotion.com/) for emulate device and [Android Studio SDK](https://developer.android.com/studio) on your computer.
 
 ### How to use:
 
@@ -120,3 +125,20 @@ $ yarn start
 ```
 
 #### Mobile
+
+Access Genymotion and open an emulate device.
+P.S.: It was tested on Android system only.
+
+```bash
+# Go into the repository
+$ cd gostack-meetapp/mobile
+
+# Install dependencies
+$ yarn
+
+# Run the Mobile
+$ react-native start
+
+# Open another window in terminal and run
+$ react-native run-android
+```
