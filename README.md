@@ -88,6 +88,8 @@ $ git clone https://github.com/Victor19Rodrigues/gostack-meetapp.git
 
 #### Backend
 
+P.S.: After running seeds, by default the password for to login is: 123456
+
 ```bash
 # Go into the repository
 $ cd gostack-meetapp/backend
