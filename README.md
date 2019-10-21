@@ -150,4 +150,4 @@ $ react-native run-android
 
 ---
 
-Made with :heart: by Victor Rodrigues :smiley: [Get in touch!](https://www.linkedin.com/in/victor-rodrigues-676563ba/)
+<p align="center">Made with :heart: by Victor Rodrigues :smiley: [Get in touch!](https://www.linkedin.com/in/victor-rodrigues-676563ba/) </p>
