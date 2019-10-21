@@ -12,6 +12,11 @@
 
 This application is a developer event aggregator app called Meetapp (an acronym for Meetup + App).
 
+![App Screenshot](https://github.com/Victor19Rodrigues/gostack-meetapp/blob/master/assets/home.png)
+![App Screenshot](https://github.com/Victor19Rodrigues/gostack-meetapp/blob/master/assets/home_logged.png)
+![App Screenshot](https://github.com/Victor19Rodrigues/gostack-meetapp/blob/master/assets/home_mobile.png)
+![App Screenshot](https://github.com/Victor19Rodrigues/gostack-meetapp/blob/master/assets/home_logged_mobile.png)
+
 ## Table of contents
 
 - :sunglasses: [Technologies](#technologies)
@@ -145,4 +150,4 @@ $ react-native run-android
 
 ---
 
-Made with ♥ by Victor Rodrigues :smiley: [Get in touch!](https://www.linkedin.com/in/victor-rodrigues-676563ba/)
+Made with :heart: by Victor Rodrigues :smiley: [Get in touch!](https://www.linkedin.com/in/victor-rodrigues-676563ba/)
