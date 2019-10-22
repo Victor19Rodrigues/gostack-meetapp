@@ -152,4 +152,4 @@ $ react-native run-android
 
 ---
 
-<p align="center">Made with :heart: by Victor Rodrigues :smiley: [Get in touch!](https://www.linkedin.com/in/victor-rodrigues-676563ba/) </p>
+Made with :heart: by Victor Rodrigues :smiley: [Get in touch!](https://www.linkedin.com/in/victor-rodrigues-676563ba/)
